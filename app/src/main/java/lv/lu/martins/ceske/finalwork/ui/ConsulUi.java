@@ -7,10 +7,15 @@ import java.util.Scanner;
 
 public class ConsulUi {
 
-    private ProductService productService = new ProductService();
+    private ProductService productService;
+    private Scanner scanner;
+
+    public ConsulUi(ProductService productService, Scanner scanner) {
+        this.productService = productService;
+        this.scanner = scanner;
+    }
 
     public void run() {
-        Scanner scanner = new Scanner(System.in);
         int userChoice;
         while (true) {
 
