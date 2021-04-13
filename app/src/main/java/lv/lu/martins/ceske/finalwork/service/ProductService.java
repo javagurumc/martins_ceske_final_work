@@ -40,8 +40,12 @@ public class ProductService {
         product.setName(productInputData.getName());
         product.setPrice(BigDecimal.valueOf(productInputData.getPrice()));
         product.setCategory(ProductCategory.valueOf(productInputData.getCategory()));
-        product.setDiscount(BigDecimal.valueOf(productInputData.getDiscount()));
-        product.setDescription(productInputData.getDescription());
+        if (productInputData.getDiscount() != null) {
+            product.setDiscount(BigDecimal.valueOf(productInputData.getDiscount()));
+        }
+        if (productInputData.getDescription() != null) {
+            product.setDescription(productInputData.getDescription());
+        }
         return product;
     }
 }

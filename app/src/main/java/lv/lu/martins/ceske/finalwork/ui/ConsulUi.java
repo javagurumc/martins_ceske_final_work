@@ -19,6 +19,16 @@ public class ConsulUi {
 
             if (userChoice == 1) {
                 ProductInputData productInputData = new ProductInputData();
+
+                System.out.println("Enter product name: ");
+                productInputData.setName(scanner.next());
+
+                System.out.println("Enter product price: ");
+                productInputData.setPrice(scanner.nextDouble());
+
+                System.out.println("Enter product category: ");
+                productInputData.setCategory(scanner.next());
+
                 productService.save(productInputData);
             } else if (userChoice == 2) {
                 productService.findAll().stream()
