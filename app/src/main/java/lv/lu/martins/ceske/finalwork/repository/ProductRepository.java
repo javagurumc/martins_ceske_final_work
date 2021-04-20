@@ -1,19 +1,19 @@
 package lv.lu.martins.ceske.finalwork.repository;
 
 import lv.lu.martins.ceske.finalwork.model.Product;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+@Component
 public class ProductRepository implements Repository<Product> {
 
     private Long idCounter = 0L;
-    private final Map<Long, Product> repository;
-
-    public ProductRepository(Map<Long, Product> repository) {
-        this.repository = repository;
-    }
+    private final Map<Long, Product> repository = new HashMap<>();
 
     @Override
     public Long save(Product product) {

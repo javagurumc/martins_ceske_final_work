@@ -5,16 +5,19 @@ import lv.lu.martins.ceske.finalwork.model.ProductCategory;
 import lv.lu.martins.ceske.finalwork.model.ProductData;
 import lv.lu.martins.ceske.finalwork.model.ProductInputData;
 import lv.lu.martins.ceske.finalwork.repository.ProductRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 
+@Component
 public class ProductService {
 
     private final ProductRepository repository;
 
+    @Autowired
     public ProductService(ProductRepository repository) {
         this.repository = repository;
     }

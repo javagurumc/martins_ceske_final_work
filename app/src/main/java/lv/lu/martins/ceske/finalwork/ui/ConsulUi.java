@@ -2,14 +2,18 @@ package lv.lu.martins.ceske.finalwork.ui;
 
 import lv.lu.martins.ceske.finalwork.model.ProductInputData;
 import lv.lu.martins.ceske.finalwork.service.ProductService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 import java.util.Scanner;
 
+@Component
 public class ConsulUi {
 
-    private ProductService productService;
-    private Scanner scanner;
+    private final ProductService productService;
+    private final Scanner scanner;
 
+    @Autowired
     public ConsulUi(ProductService productService, Scanner scanner) {
         this.productService = productService;
         this.scanner = scanner;
