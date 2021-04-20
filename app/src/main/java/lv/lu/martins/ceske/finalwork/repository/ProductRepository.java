@@ -11,7 +11,7 @@ import java.util.Map;
 public class ProductRepository implements Repository<Product> {
 
     private Long idCounter = 0L;
-    private final Map<Long, Product> repository = new HashMap<>();
+    private Map<Long, Product> repository = new HashMap<>();
 
     @Override
     public Long save(Product product) {

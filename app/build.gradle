@@ -18,11 +18,18 @@ repositories {
 
 dependencies {
 
+    compileOnly 'org.projectlombok:lombok:1.18.20'
+    annotationProcessor 'org.projectlombok:lombok:1.18.20'
+
     implementation group: 'org.springframework', name: 'spring-context', version: '5.3.6'
 
     // Use JUnit test framework.
     testImplementation 'junit:junit:4.13'
     testImplementation group: 'org.mockito', name: 'mockito-core', version: '3.8.0'
+
+    testCompileOnly 'org.projectlombok:lombok:1.18.20'
+    testAnnotationProcessor 'org.projectlombok:lombok:1.18.20'
+
 }
 
 application {
