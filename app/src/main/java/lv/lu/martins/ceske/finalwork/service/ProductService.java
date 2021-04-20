@@ -7,12 +7,13 @@ import lv.lu.martins.ceske.finalwork.model.ProductInputData;
 import lv.lu.martins.ceske.finalwork.repository.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
-@Component
+@Service
 public class ProductService {
 
     private final ProductRepository repository;
