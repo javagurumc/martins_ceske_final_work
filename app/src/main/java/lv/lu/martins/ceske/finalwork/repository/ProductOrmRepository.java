@@ -4,8 +4,10 @@ import lv.lu.martins.ceske.finalwork.domain.Product;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 
+import javax.transaction.Transactional;
 import java.util.List;
 
+@Transactional
 @org.springframework.stereotype.Repository
 public class ProductOrmRepository implements Repository<Product> {
 
