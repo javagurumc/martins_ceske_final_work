@@ -1,7 +1,7 @@
 package lv.lu.martins.ceske.finalwork.service;
 
-import lv.lu.martins.ceske.finalwork.model.Product;
-import lv.lu.martins.ceske.finalwork.model.ProductCategory;
+import lv.lu.martins.ceske.finalwork.domain.Product;
+import lv.lu.martins.ceske.finalwork.domain.ProductCategory;
 import lv.lu.martins.ceske.finalwork.model.ProductInputData;
 import lv.lu.martins.ceske.finalwork.repository.Repository;
 import org.junit.Test;

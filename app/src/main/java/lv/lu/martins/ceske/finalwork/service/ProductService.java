@@ -1,7 +1,7 @@
 package lv.lu.martins.ceske.finalwork.service;
 
-import lv.lu.martins.ceske.finalwork.model.Product;
-import lv.lu.martins.ceske.finalwork.model.ProductCategory;
+import lv.lu.martins.ceske.finalwork.domain.Product;
+import lv.lu.martins.ceske.finalwork.domain.ProductCategory;
 import lv.lu.martins.ceske.finalwork.model.ProductData;
 import lv.lu.martins.ceske.finalwork.model.ProductInputData;
 import lv.lu.martins.ceske.finalwork.repository.Repository;
@@ -15,21 +15,21 @@ import java.util.List;
 @Service
 public class ProductService {
 
-    private final Repository<Product> repository;
+    private final Repository<Product> productRepository;
 
     @Autowired
-    public ProductService(Repository<Product> repository) {
-        this.repository = repository;
+    public ProductService(Repository<Product> productOrmRepository) {
+        this.productRepository = productOrmRepository;
     }
 
     public void save(ProductInputData productInputData) {
         Product product = convertFrom(productInputData);
-        repository.save(product);
+        productRepository.save(product);
     }
 
     public List<ProductData> findAll() {
         List<ProductData> result = new ArrayList<>();
-        for (Product product : repository.findAll()) {
+        for (Product product : productRepository.findAll()) {
             result.add(covertFrom(product));
         }
         return result;

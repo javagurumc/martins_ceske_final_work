@@ -20,8 +20,8 @@ dependencies {
 
     implementation group: 'com.h2database', name: 'h2', version: '1.4.200'
     implementation group: 'org.springframework', name: 'spring-jdbc', version: '5.3.6'
-    implementation group: 'org.hibernate', name: 'hibernate-core', version: '5.4.30.Final'
     implementation group: 'org.springframework', name: 'spring-orm', version: '5.3.6'
+    implementation group: 'org.hibernate', name: 'hibernate-core', version: '5.4.30.Final'
 
     compileOnly 'org.projectlombok:lombok:1.18.20'
     annotationProcessor 'org.projectlombok:lombok:1.18.20'
