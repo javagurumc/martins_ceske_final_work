@@ -4,9 +4,8 @@ import lv.lu.martins.ceske.finalwork.model.Product;
 import lv.lu.martins.ceske.finalwork.model.ProductCategory;
 import lv.lu.martins.ceske.finalwork.model.ProductData;
 import lv.lu.martins.ceske.finalwork.model.ProductInputData;
-import lv.lu.martins.ceske.finalwork.repository.ProductRepository;
+import lv.lu.martins.ceske.finalwork.repository.Repository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
@@ -16,10 +15,10 @@ import java.util.List;
 @Service
 public class ProductService {
 
-    private final ProductRepository repository;
+    private final Repository<Product> repository;
 
     @Autowired
-    public ProductService(ProductRepository repository) {
+    public ProductService(Repository<Product> repository) {
         this.repository = repository;
     }
 
