@@ -1,9 +1,17 @@
 package lv.lu.martins.ceske.finalwork.model;
 
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Positive;
+
 public class ProductInputData {
 
+    @NotBlank(message = "Name is mandatory")
     private String name;
+    @NotNull(message = "Price is mandatory")
+    @Positive
     private Double price;
+    @NotBlank(message = "Category is mandatory")
     private String category;
     private Double discount;
     private String description;
