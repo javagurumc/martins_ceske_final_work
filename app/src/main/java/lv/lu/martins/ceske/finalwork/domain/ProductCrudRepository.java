@@ -1,9 +1,8 @@
-package lv.lu.martins.ceske.finalwork.repository;
+package lv.lu.martins.ceske.finalwork.domain;
 
-import lv.lu.martins.ceske.finalwork.domain.Product;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
-//@Repository
+@Repository
 public interface ProductCrudRepository extends CrudRepository<Product, Long> {
 }
